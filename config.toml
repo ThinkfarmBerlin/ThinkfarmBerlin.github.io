@@ -1,0 +1,12 @@
+baseURL = "http://localhost:1313/"
+title = "Thinkfarm"
+disableKinds = ["taxonomy", "term"]
+
+[outputs]
+home  = ["HTML"]
+
+[markup.goldmark.parser]
+autoHeadingID = true
+
+[markup.goldmark.renderer]
+unsafe = true  # allow HTML in markdown files

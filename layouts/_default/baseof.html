@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src www.youtube-nocookie.com">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ $style := resources.Get "style.css" | fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}">
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="{{ "/" | relURL }}" rel="home" class="logo">
+          <img src="{{ "/img/logo.png" | relURL }}" alt="{{ .Site.Title }}">
+        </a>
+        <nav aria-label="main">
+          <ul>
+            <li><a href="{{ "/" | relURL }}">Thinkfarm</a></li>
+            <li><a href="{{ "konzept/" | relURL }}">Konzept</a></li>
+            <li><a href="{{ "kontakt/" | relURL }}">Kontakt &amp; Mitmachen</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="scroll">
+      <main>
+        <div class="container">
+          {{ block "main" . }}{{ end }}
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <nav aria-label="social">
+            <ul>
+              <!--<li><a rel="me" href="https://purplesloth.itch.io/">itch.io</a></li>-->
+              <!--<li><a href="https://git.hemio.de/purpleSloth/">Gitlab</a></li>-->
+              <!--<li><a rel="me" href="https://twitter.com/studio_sloth">Twitter</a></li>-->
+              <!--<li><a rel="me" href="https://bsky.app/profile/purplesloth.studio">Bluesky</a></li>-->
+              <!--<li><a rel="me" href="https://mastodon.gamedev.place/@purpleSloth">Mastodon</a></li>-->
+              <!--<li><a rel="me" href="https://www.instagram.com/purpleslothstudio/">Instagram</a></li>-->
+              <!--<li><a href="https://discord.gg/23uNN3Bmht">Discord</a></li>-->
+              <!--<li><a href="mailto:info@purplesloth.studio">Mail</a></li>-->
+            </ul>
+          </nav>
+          <nav aria-label="legal">
+            <ul>
+              <li><a href="{{ "impressum/" | relURL }}">Impressum</a></li>
+              <li><a href="{{ "privacy/" | relURL }}">Privacy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

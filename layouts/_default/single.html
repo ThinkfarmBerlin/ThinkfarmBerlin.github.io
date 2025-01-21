@@ -1,0 +1,33 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  <div class="row mt-2 mb-3">
+    <div class="col-md-4">
+      {{ with .Resources.GetMatch "banner.*" }}
+        <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="w-100 mb-2">
+      {{ end }}
+      {{ if isset .Params.Links "link1" }}
+        <a href="{{ .Params.Links.link1 }}" class="btn btn-block bg-inverse mb-1">{{ .Params.Links.title1 }}</a>
+      {{ end }}
+      {{ if isset .Params.Links "link2" }}
+        <a href="{{ .Params.Links.link2 }}" class="btn btn-block bg-inverse mb-1">{{ .Params.Links.title2 }}</a>
+      {{ end }}
+      {{ if isset .Params.Links "link3" }}
+        <a href="{{ .Params.Links.link3 }}" class="btn btn-block bg-inverse mb-1">{{ .Params.Links.title3 }}</a>
+      {{ end }}
+      {{ if isset .Params.Links "link4" }}
+        <a href="{{ .Params.Links.link4 }}" class="btn btn-block bg-inverse mb-1">{{ .Params.Links.title4 }}</a>
+      {{ end }}
+      {{ if isset .Params.Links "link5" }}
+        <a href="{{ .Params.Links.link5 }}" class="btn btn-block bg-inverse mb-1">{{ .Params.Links.title5 }}</a>
+      {{ end }}
+    </div>
+
+    <div class="col-md-8 bg-body p-2">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}

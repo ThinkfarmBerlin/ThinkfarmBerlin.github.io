@@ -1,0 +1,6 @@
+<a href="{{ .RelPermalink }}" class="card bg-inverse h-100">
+
+  {{ $banner := .Resources.GetMatch "banner.*" }}
+
+  <img src="{{ $banner.RelPermalink }}" alt="{{ .Title }}" class="card-img flex-grow-1 img-cover">
+</a>

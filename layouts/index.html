@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <p class = "subheading">Aktive Farmer*innen:</p>
+  <ul class="tiles mt-1 mb-1">
+    {{ range (site.GetPage "mitglieder").Pages }}
+      {{ if eq .Params.category "aktiv" }}
+        <li data-category="{{ .Params.category }}">
+          {{ partial "member_tile.html" . }}
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+
+  <p class = "subheading">Ehemalige Farmer*innen:</p>
+  <ul class="tiles mt-1 mb-1">
+    {{ range (site.GetPage "mitglieder").Pages }}
+      {{ if eq .Params.category "ehemalige" }}
+        <li data-category="{{ .Params.category }}">
+          {{ partial "member_tile.html" . }}
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+
+  {{ range (site.GetPage "mitglieder").Pages }}
+      {{ if and (and (ne .Params.category "ehemalige") (ne .Params.category "aktiv")) (ne .Params.category "hidden") }}
+        {{ errorf "Illegal member category '%s' for '%s'. Valid options are 'ehemalige', 'aktiv' and 'hidden'." .Params.category .Params.title }}
+      {{ end }}
+    {{ end }}
+{{ end }}

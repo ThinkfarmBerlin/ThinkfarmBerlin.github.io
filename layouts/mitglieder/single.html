@@ -1,0 +1,19 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  <div class="row mt-1 mb-1">
+    <div class="col-md-1">
+      {{ with .Resources.GetMatch "banner.*" }}
+        <img src="{{ .RelPermalink }}" alt="{{ .Title }}" class="w-100 mb-2">
+      {{ end }}
+    </div>
+    <div class="col-md-8">
+      <div class="bg-body p-2">
+        <h1>{{ .Title }} </h1>
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+{{ end }}
