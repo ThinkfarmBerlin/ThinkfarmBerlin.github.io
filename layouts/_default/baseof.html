@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src www.youtube-nocookie.com">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     {{ $style := resources.Get "style.css" | fingerprint }}
-    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" type="text/css" href="{{ "style.css" | relURL }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}">
     {{ range .AlternativeOutputFormats -}}
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
