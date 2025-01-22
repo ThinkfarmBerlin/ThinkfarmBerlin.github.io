@@ -1,4 +1,8 @@
 {{ define "main" }}
+
+<img src="{{ "/img/tf_bg.png" | relURL }}" class = "landingimg" alt="{{ .Site.Title }}">
+
+
   <p class = "subheading">Aktive Farmer*innen:</p>
   <ul class="tiles mt-1 mb-1">
     {{ range (site.GetPage "mitglieder").Pages }}

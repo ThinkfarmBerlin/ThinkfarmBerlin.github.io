@@ -35,11 +35,10 @@ III. Information about the data processing
 The party responsible for this website (the "controller") for purposes
 of data protection law is:
 
-Purple Sloth Studio eG  
-c/o Thinkfarm  
+Thinkfarm e.V.  
 Oberlandstr. 26-35  
 12099 Berlin  
-Email: <info@purplesloth.studio>
+Email: <hosting@thinkfarm.org>
 
 ## II. The rights of users and data subjects
 

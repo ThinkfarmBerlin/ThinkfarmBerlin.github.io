@@ -1,8 +1,8 @@
 :root {
-  --brand: #800080;
-  --brand-off: #cc9c00;
-  --brand-bg: var(--brand-off);
-  --brand-fg: var(--brand);
+  --brand: #57575c;
+  --brand-off: #c3da7c;
+  --brand-bg: var(--brand);
+  --brand-fg: var(--brand-off);
   --light: #fff;
   --dark: #222;
   --dark-text: #57575c;
@@ -161,7 +161,7 @@ nav li {
 nav a {
   display: inline-block;
   padding: 1em;
-  color: inherit;
+  color: var(--brand);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -361,8 +361,16 @@ a.card:hover {
   font-weight: bold;
   text-align: center;
   color: var(--dark-text);
+  background-color: var(--bg-brand-off);
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .landingimg{
   width: 100% !important;
+}
+
+.fullwidth{
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
