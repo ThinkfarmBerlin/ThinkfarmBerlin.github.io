@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://thinkfarmberlin.github.io/"
 title = "Thinkfarm"
 disableKinds = ["taxonomy", "term"]
 

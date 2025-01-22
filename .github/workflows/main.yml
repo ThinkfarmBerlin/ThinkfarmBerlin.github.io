@@ -33,4 +33,4 @@ jobs:
           user_name: ThinkfarmBerlin
           user_email: hosting@thinkfarm.org
           publish_branch: public #important!
-          cname: thinkfarm.org
+          cname: thinkfarmberlin.github.io/
