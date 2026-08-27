@@ -1,5 +1,5 @@
 
-###### Die Thinkfarm ist eine Bürogemeinschaft, in der wir solidarisch und selbstorganisiert miteinander arbeiten, teilen und lernen. Hier begegnen sich Menschen aus den unterschiedlichsten Disziplinen, um den gesellschaftlichen Wandel zu gestalten. Für uns ist sie der ideale Nährboden für sinnstiftendes Handeln, hin zu einer sozial gerechten und ökologisch nachhaltigen Gesellschaft. 
+Die Thinkfarm ist eine Bürogemeinschaft, in der wir solidarisch und selbstorganisiert miteinander arbeiten, teilen und lernen. Hier begegnen sich Menschen aus den unterschiedlichsten Disziplinen, um den gesellschaftlichen Wandel zu gestalten. Für uns ist sie der ideale Nährboden für sinnstiftendes Handeln, hin zu einer sozial gerechten und ökologisch nachhaltigen Gesellschaft. 
 
 Zur Zeit haben wir **freie Plätze** (Einzeltische und Teamräume) zu
 vermieten und freuen uns auf Eure Anfragen und Bewerbungen.  
